@@ -1,0 +1,60 @@
+@import "styles";
+
+.Logo {
+  display: flex;
+  background-color: #175a51;
+  cursor: pointer;
+}
+
+.imageBlock {
+  display: flex;
+  border-right: 1px solid $dull-yellow;
+  padding-right: 12px;
+  img {
+    max-width: 92px;
+
+    @include media-laptop {
+      max-width: 70px;
+    }
+
+    @include media-mobile {
+      max-width: 54px;
+    }
+  }
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+  padding-left: 12px;
+  line-height: 1.2;
+}
+
+.title {
+  @include text(15px, 600, $dull-yellow);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+
+  @include media-laptop {
+    font-size: 13px;
+  }
+
+  @include media-mobile {
+    font-size: 11px;
+  }
+}
+
+.subTitle {
+  @include text(13px, 300, #7c7c7b);
+  letter-spacing: 0.4px;
+
+  @include media-laptop {
+    font-size: 11px;
+  }
+
+  @include media-mobile {
+    font-size: 9px;
+  }
+}

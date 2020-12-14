@@ -1,0 +1,90 @@
+// fonts
+@font-face {
+  font-family: "Graphik";
+  src: url("~fonts/Graphik-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("~fonts/Graphik-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("~fonts/Graphik-Semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("~fonts/Graphik-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+// breakpoints
+// $max-mobile-breakpoint: 1400px;
+// $max-tablet-breakpoint: 1400px;
+// $max-laptop-breakpoint: 1400px;
+$max-mobile-breakpoint: 576px;
+$max-tablet-breakpoint: 768px;
+$max-laptop-breakpoint: 1400px;
+
+// export
+:export {
+  maxMobileBreakpoint: $max-mobile-breakpoint;
+  maxTabletBreakpoint: $max-tablet-breakpoint;
+  maxLaptopBreakpoint: $max-laptop-breakpoint;
+}
+
+// colors
+$dull-yellow: #bca15a;
+$dull-light-yellow: #bca05ab3;
+$green: #175a51;
+$gray: #8a8a8a;
+$light-gray: #8a8a8ab3;
+$dark-gray: #333333;
+
+// mixins
+@mixin text($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin media-custom($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $max-mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $max-tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: $max-laptop-breakpoint) {
+    @content;
+  }
+}
+
+// extends
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}

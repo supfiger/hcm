@@ -1,0 +1,113 @@
+@import "styles";
+
+.SignPage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $green;
+  display: flex;
+  justify-content: center;
+  padding: 80px 270px;
+
+  @include media-custom(1800px) {
+    padding: 80px 100px;
+  }
+
+  @include media-laptop {
+    padding: 50px 30px 100px;
+  }
+
+  @include media-tablet {
+    padding: 0;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+
+  @include media-tablet {
+    flex-direction: column;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+  }
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  flex: 558;
+}
+
+.rightSection {
+  flex: 858;
+}
+
+.imageBlock {
+  flex: 1;
+  background: linear-gradient(
+      180deg,
+      rgba(23, 90, 81, 0.35) 0%,
+      rgba(23, 90, 81, 0.175) 44.3%,
+      rgba(118, 175, 168, 0) 100%
+    ),
+    url("~assets/sign-background.jpg") no-repeat;
+  background-position: 35% 120%;
+  background-size: 280% 100%;
+
+  @include media-tablet {
+    flex: auto;
+    min-height: 300px;
+    background-position: 75% 45%;
+    background-size: 175% 145%;
+  }
+
+  @include media-mobile {
+    flex: auto;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 75% 45%;
+    background-size: 175% 145%;
+  }
+}
+
+.logo {
+  padding: 13px 0 13px 52px;
+
+  @include media-laptop {
+    padding: 13px 30px;
+  }
+
+  @include media-tablet {
+    padding: 10px 60px 10px 32px;
+  }
+
+  @include media-mobile {
+    padding: 10px 60px 10px 32px;
+  }
+}
+
+.title {
+  @include text(48px, 500, #ffffffbf);
+  padding-left: 47px;
+  padding-top: 110px;
+  width: 100%;
+
+  @include media-laptop {
+    font-size: 30px;
+  }
+
+  @include media-tablet {
+    font-size: 35px;
+    padding: 64px 20px 57px 20px;
+    text-align: center;
+  }
+
+  @include media-mobile {
+    font-size: 24px;
+    padding: 64px 20px 57px 20px;
+  }
+}

@@ -6,10 +6,19 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.5",
+    "mobx": "^6.0.4",
+    "mobx-persist": "^0.4.1",
+    "mobx-react": "^7.0.5",
+    "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "yarn": "^1.22.10",
+    "yup": "^0.32.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "react-app-rewired": "^2.1.8"
   }
 }

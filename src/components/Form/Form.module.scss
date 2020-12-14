@@ -1,0 +1,156 @@
+@import "styles";
+
+.Form {
+  @extend %flex-column;
+  background-color: white;
+  height: 100%;
+  padding: 65px 35px 175px 138px;
+
+  @include media-laptop {
+    padding: 64px 20px 80px;
+  }
+
+  @include media-tablet {
+    padding: 50px 80px 50px;
+    align-items: center;
+  }
+
+  @include media-mobile {
+    padding: 50px 20px 50px;
+    align-items: center;
+  }
+}
+
+.topSection {
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.bottomSection {
+  max-width: 400px;
+
+  @include media-tablet {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  margin-bottom: 55px;
+
+  span {
+    margin-right: 5px;
+    @include text(14px, 500, $gray);
+  }
+
+  a {
+    @include text(14px, 700, $dull-light-yellow);
+    text-decoration: none;
+    line-height: 12px;
+  }
+
+  @include media-tablet {
+    padding: 0;
+    line-height: 1;
+  }
+}
+
+.formTitle {
+  @include text(24px, 600, $gray);
+}
+
+.signGoogleButton {
+  @extend %flex-center;
+  padding: 8px 20px;
+  background-color: $green;
+  width: 100%;
+  margin-bottom: 32px;
+
+  span:nth-child(1) {
+    @include text(24px, 700, white);
+    margin-right: 40px;
+  }
+  span:nth-child(2) {
+    @include text(14px, 700, white);
+  }
+}
+
+.lineBlock {
+  @extend %flex-center;
+  margin-bottom: 38px;
+
+  span:nth-child(odd) {
+    border-bottom: 1px solid #175a5180;
+    display: flex;
+    flex: 1;
+  }
+  span:nth-child(2) {
+    @include text(14px, 500, $gray);
+    padding: 0 25px;
+  }
+}
+
+.formikForm,
+.formikItem {
+  @extend %flex-column;
+}
+
+.formikItem {
+  margin-bottom: 32px;
+  position: relative;
+
+  h3 {
+    @include text(18px, 700, #000000b3);
+    margin-bottom: 8px;
+  }
+
+  input::placeholder {
+    color: rgba(138, 138, 138, 0.3);
+  }
+
+  &:last-of-type {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.checkboxBlock {
+  @include text(14px, 400, #c4c4c4);
+  flex: 1;
+
+  span {
+    margin-right: 5px;
+  }
+  a {
+    @include text(14px, 600, $dull-yellow);
+    text-decoration: none;
+  }
+}
+
+.submitButton {
+  @extend %flex-center;
+  @include text(18px, 700, white);
+  background: $dull-yellow;
+  padding: 20px 30px;
+}
+
+.passwordBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  margin-bottom: 8px;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  span {
+    @include text(14px, 700, $dull-light-yellow);
+    cursor: pointer;
+  }
+}

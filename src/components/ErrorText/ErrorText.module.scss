@@ -1,0 +1,7 @@
+@import "styles";
+
+.ErrorText {
+  @include text(12px, 400, red);
+  position: absolute;
+  bottom: -18px;
+}

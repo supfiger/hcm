@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { observer, inject } from "mobx-react";
 
-function App() {
+import { SignPage } from "pages";
+import styles from "./App.module.scss";
+
+const App = props => {
+  const { setWindowSize } = props.store.AppStore;
+
+  useEffect(() => {
+    window.addEventListener("resize", setWindowSize);
+    // return () => window.removeEventListener("resize", setWindowSize);
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <Router>
+        <Switch>
+          <Redirect exact from="/" to="signup" />
+          <Route path="/signup" component={SignPage} />
+          <Route path="/signin" component={SignPage} />
+        </Switch>
+      </Router>
     </div>
   );
-}
+};
 
-export default App;
+export default inject("store")(observer(App));
